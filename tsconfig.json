@@ -1,8 +1,16 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "src/**/*",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+    ],
   "exclude": ["node_modules"]
 }
